@@ -23,8 +23,8 @@ export default class DataFuncs{
         }
     }
 
-    static generateTable(table, data){
+    static generateTable(table, data, dataRecords){
         this._generateTableHead(table, data);
-        this._generateTableBody(table, data);
+        this._generateTableBody(table, dataRecords);
     }
 }

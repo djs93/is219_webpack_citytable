@@ -12,8 +12,9 @@ getJSON('http://localhost:8000/api/v1/cities',
         } else {
             let table = document.querySelector("table");
             let data = Object.keys((records.data[0]));
+            let dataRecords = records.data;
 
-            DataFuncs.generateTable(table, data);
+            DataFuncs.generateTable(table, data, dataRecords);
         }
     });
 
