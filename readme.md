@@ -1,24 +1,24 @@
 # CRUD Update:
 ## Create:
 Response to POST:
-![Create image](./docs/images/POST%20response.png)
+![Create image](images/POST%20response.png)
 Proof of addition:
-![Create image verification](./docs/images/POST%20proof%20of%20change.png)
+![Create image verification](images/POST%20proof%20of%20change.png)
 ## Read:
 Response to GET (all entries):
-![Read all image](./docs/images/GET%20all.png)
+![Read all image](images/GET%20all.png)
 Response to GET (single entry):
-![Read one image](./docs/images/GET%20single.png)
+![Read one image](images/GET%20single.png)
 ## Update:
 Response to PUT:
-![Create image](./docs/images/PUT%20response.png)
+![Create image](images/PUT%20response.png)
 Proof of change:
-![Create image verification](./docs/images/PUT%20proof%20of%20change.png)
+![Create image verification](images/PUT%20proof%20of%20change.png)
 ## Delete:
 Response to DELETE:
-![Create image](./docs/images/DELETE%20response.png)
+![Create image](images/DELETE%20response.png)
 Proof of change:
-![Create image verification](./docs/images/DELETE%20proof%20of%20change.png)
+![Create image verification](images/DELETE%20proof%20of%20change.png)
 ___
 Prerequisites:
 Install Node:

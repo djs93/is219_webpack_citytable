@@ -25,5 +25,4 @@ app.set('ip', process.env.NODEJS_IP || '127.0.0.1');
 app.listen(app.get('port'), function() {
     console.log('%s: Node server started on %s ...', Date(Date.now()), app.get('port'));
     open("http://localhost:8000");
-
 });
