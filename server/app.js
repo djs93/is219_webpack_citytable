@@ -36,6 +36,10 @@ app.get('/', function (req,res){
     res.render('home');
 });
 
+app.get('/register', (req, res) => {
+    res.render('registration');
+});
+
 app.use(express.static('docs'));
 
 app.listen(app.get('port'), function() {
