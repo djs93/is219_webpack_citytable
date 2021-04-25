@@ -1,3 +1,24 @@
+# JWT Authentication and Authorization:
+## Login:
+Login Success:
+![Login Success](images/Auth%20service%20request.png)
+Login Failure:
+![Login Failure](images/Auth%20service%20request%20fail.png)
+## Logout:
+Logout:
+![Logout](images/Logout%20Success.png)
+## Refresh Tokens:
+Refresh Token to Token:
+![Refresh Token](images/Refresh%20Token.png)
+## City API Integration
+Get all, auth failure:
+![Get all, auth failure](images/City%20service%20auth%20unsuccessful.png)
+Get all, auth success:
+![Get all, auth success](images/City%20service%20auth%20successful.png)
+Attempt to change data without admin permissions/not logged in:
+![Attempt to change data without admin permissions](images/POST%20response%20unauth.png)
+*All other data-changing requests behave the same way and return the same data as below when user has proper permissions*
+---
 # CRUD Update:
 ## Create:
 Response to POST:
