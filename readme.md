@@ -1,24 +1,26 @@
-# CRUD Update:
-## Create:
-Response to POST:
-![Create image](images/POST%20response.png)
-Proof of addition:
-![Create image verification](images/POST%20proof%20of%20change.png)
-## Read:
-Response to GET (all entries):
-![Read all image](images/GET%20all.png)
-Response to GET (single entry):
-![Read one image](images/GET%20single.png)
-## Update:
-Response to PUT:
-![Create image](images/PUT%20response.png)
-Proof of change:
-![Create image verification](images/PUT%20proof%20of%20change.png)
-## Delete:
-Response to DELETE:
-![Create image](images/DELETE%20response.png)
-Proof of change:
-![Create image verification](images/DELETE%20proof%20of%20change.png)
+# Basic Express Authentication:
+## Landing page:
+When you first visit the site:
+![Landing Page](images/Landing%20page.png)
+## Login:
+Login Page:
+![Login Page](images/Login%20page.png)
+Incorrect Password:
+![Login Incorrect Password](images/Incorrect%20password%20login.png)
+## Register:
+Register Page:
+![Register Page](images/Register%20page.png)
+Mismatched Passwords:
+![Mismatched Passwords](images/Register%20mismatched%20passwords.png)
+User already exists:
+![User already exists](images/Register%20already%20registered.png)
+Registration Success:
+![Registration Success](images/Register%20success.png)
+## Protected Page:
+Login Success:
+![Login Success](images/Login%20correct%20password%20table.png)
+Not logged in:
+![Create image verification](images/Protected%20unauthorized%20access%20-%20no%20login.png)
 ___
 Prerequisites:
 Install Node:
