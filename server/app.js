@@ -7,6 +7,9 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const registration = require('./authentication/Registration');
+const login = require('./authentication/Login');
+const userData = require('./authentication/User');
+
 app.use(cors())
 
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -43,6 +46,24 @@ app.get('/register', (req, res) => {
 
 app.post('/register', (req, res) => {
     registration.register(res, req);
+});
+
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
+app.post('/login', (req, res) => {
+    login.login(res,req);
+});
+
+app.use((req, res, next) => {
+    // Get auth token from the cookies
+    const authToken = req.cookies['AuthToken'];
+
+    // Inject the user to the request
+    req.user = userData.authTokens[authToken];
+
+    next();
 });
 
 app.use(express.static('docs'));

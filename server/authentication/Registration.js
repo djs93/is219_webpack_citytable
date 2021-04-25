@@ -1,5 +1,5 @@
 const cryptoFuncs = require('./CryptoFuncs');
-const user = require('./User');
+const userData = require('./User');
 
 module.exports = class Registration{
     static register(res, req){
@@ -9,7 +9,7 @@ module.exports = class Registration{
         if (password === confirmPassword) {
 
             // Check if user with the same email is also registered
-            if (user.UserList.find(user => user.email === email)) {
+            if (userData.UserList.find(user => user.email === email)) {
 
                 res.render('registration', {
                     message: 'User already registered.',
@@ -22,7 +22,7 @@ module.exports = class Registration{
             const hashedPassword = cryptoFuncs.getHashedPassword(password);
 
             // Store user into the database if you are using one
-            user.UserList.push({
+            userData.UserList.push({
                 firstName,
                 lastName,
                 email,

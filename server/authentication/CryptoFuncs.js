@@ -6,4 +6,7 @@ module.exports = class CryptoFuncs {
         const hash = sha256.update(password).digest('base64');
         return hash;
     }
+    static generateAuthToken = () => {
+        return crypto.randomBytes(30).toString('hex');
+    }
 }

@@ -6,4 +6,5 @@ module.exports = class User{
         // This is the SHA256 hash for value of `password`
         password: 'XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg='
     }];
+    static authTokens = {};
 }
