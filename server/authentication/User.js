@@ -7,4 +7,14 @@ module.exports = class User{
         password: 'XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg='
     }];
     static authTokens = {};
+    static requireAuth = (req, res, next) => {
+        if (req.user) {
+            next();
+        } else {
+            res.render('login', {
+                message: 'Please login to continue',
+                messageClass: 'alert-danger'
+            });
+        }
+    };
 }

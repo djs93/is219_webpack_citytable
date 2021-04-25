@@ -66,6 +66,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get('/protected', userData.requireAuth, (req, res) => {
+    res.render('protected');
+});
+
 app.use(express.static('docs'));
 
 app.listen(app.get('port'), function() {
