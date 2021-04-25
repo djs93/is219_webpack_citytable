@@ -6,6 +6,7 @@ const open = require("open");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const registration = require('./authentication/Registration');
 app.use(cors())
 
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -38,6 +39,10 @@ app.get('/', function (req,res){
 
 app.get('/register', (req, res) => {
     res.render('registration');
+});
+
+app.post('/register', (req, res) => {
+    registration.register(res, req);
 });
 
 app.use(express.static('docs'));
