@@ -49,7 +49,7 @@ app.use(auth(config));
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
     if(req.oidc.isAuthenticated()){
-        res.render('protected');
+        res.render('protected',{showLogout: true});
     }
     else{
         res.render('home');
