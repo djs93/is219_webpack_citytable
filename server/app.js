@@ -1,16 +1,16 @@
 'use strict';
 const express = require('express');
 const exphbs = require('express-handlebars');
-const path = require("path");
 const expressSession = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 require("dotenv").config();
+const authRouter = require("./auth");
 const app = express();
 const open = require("open");
 const bodyParser = require('body-parser');
 var cors = require('cors')
-app.use(cors())
+app.use(cors());
 app.use(express.static('docs'));
 
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -28,6 +28,12 @@ app.engine('hbs', exphbs({
 
 // using as middleware
 app.use('/api/v1/cities', citiesRoutes);
+// Router mounting
+app.use("/", authRouter);
+
+app.get('/', function (req,res){
+    res.render('home');
+});
 
 app.set('port', process.env.PORT || 8000);
 app.set('ip', process.env.NODEJS_IP || '127.0.0.1');
@@ -78,6 +84,12 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((user, done) => {
     done(null, user);
+});
+
+// Creating custom middleware with Express
+app.use((req, res, next) => {
+    res.locals.isAuthenticated = req.isAuthenticated();
+    next();
 });
 
 app.listen(app.get('port'), function() {
