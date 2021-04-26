@@ -5,7 +5,7 @@
 ![Auth0 Prompt](images/Auth0%20prompt.png)
 Signing in with Google:
 ![Signing in with Google](images/signing%20in%20with%20google.png)
-##Sign In Successful
+## Sign In Successful
 ![Sign In Successful](images/Signed%20in%20successfully.png)
 *Logging out brings you back to the landing page, there is no way to get to the table display without being signed in*
 ---
