@@ -6,7 +6,7 @@ import DataFuncs from './DataFuncs';
 TestJS();
 
 getJSON('http://localhost:8000/api/v1/cities',
-    function(err, records) {
+    (err, records) => {
         if (err !== null) {
             /* eslint-disable no-undef */
             alert('Something went wrong: ' + err);

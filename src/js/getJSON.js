@@ -4,7 +4,7 @@ export default function getJSON(url, callback) {
     /* eslint-enable no-undef */
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
-    xhr.onload = function() {
+    xhr.onload = () => {
         const status = xhr.status;
         if (status === 200) {
             callback(null, xhr.response);
