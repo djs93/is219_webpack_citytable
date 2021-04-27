@@ -1,4 +1,4 @@
-export default class DataFuncs{
+export default class DataFuncs {
     static _generateTableHead(table, data) {
         let thead = table.createTHead();
         let row = thead.insertRow();
@@ -23,7 +23,7 @@ export default class DataFuncs{
         }
     }
 
-    static generateTable(table, data, dataRecords){
+    static generateTable(table, data, dataRecords) {
         this._generateTableHead(table, data);
         this._generateTableBody(table, dataRecords);
     }
