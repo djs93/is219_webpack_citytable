@@ -2,25 +2,24 @@ export default class DataFuncs {
     static generateTableHead(table, data) {
         const thead = table.createTHead();
         const row = thead.insertRow();
-        for (const key of data) {
+        data.forEach((key) => {
             const th = document.createElement("th");
             const text = document.createTextNode(key);
             th.appendChild(text);
             row.appendChild(th);
-        }
+        })
     }
 
     static generateTableBody(table, data) {
-        for (const element of data) {
+        Object.entries(data).forEach((element) => {
             const row = table.insertRow();
-            console.log(element);
-            let key;
-            for (key in element) {
+            console.log(element[1]);
+            Object.entries(element[1]).forEach((key) => {
                 const cell = row.insertCell();
-                const text = document.createTextNode(element[key]);
+                const text = document.createTextNode(element[1][key[0]]);
                 cell.appendChild(text);
-            }
-        }
+            })
+        })
     }
 
     static generateTable(table, data, dataRecords) {
