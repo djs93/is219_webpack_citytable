@@ -1,5 +1,5 @@
 export default class DataFuncs {
-    static _generateTableHead(table, data) {
+    static generateTableHead(table, data) {
         let thead = table.createTHead();
         let row = thead.insertRow();
         for (let key of data) {
@@ -10,7 +10,7 @@ export default class DataFuncs {
         }
     }
 
-    static _generateTableBody(table, data) {
+    static generateTableBody(table, data) {
         for (let element of data) {
             let row = table.insertRow();
             console.log(element);
@@ -24,7 +24,7 @@ export default class DataFuncs {
     }
 
     static generateTable(table, data, dataRecords) {
-        this._generateTableHead(table, data);
-        this._generateTableBody(table, dataRecords);
+        this.generateTableHead(table, data);
+        this.generateTableBody(table, dataRecords);
     }
 }
