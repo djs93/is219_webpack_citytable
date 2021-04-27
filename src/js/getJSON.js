@@ -1,4 +1,4 @@
-export default  function getJSON(url, callback) {
+export default function getJSON(url, callback) {
     /* eslint-disable no-undef */
     var xhr = new XMLHttpRequest();
     /* eslint-enable no-undef */
