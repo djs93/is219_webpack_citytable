@@ -3,8 +3,10 @@ export default class DataFuncs {
         const thead = table.createTHead();
         const row = thead.insertRow();
         data.forEach((key) => {
+            /* eslint-disable no-undef */
             const th = document.createElement('th');
             const text = document.createTextNode(key);
+            /* eslint-enable no-undef */
             th.appendChild(text);
             row.appendChild(th);
         })
@@ -16,7 +18,9 @@ export default class DataFuncs {
             console.log(element[1]);
             Object.entries(element[1]).forEach((key) => {
                 const cell = row.insertCell();
+                /* eslint-disable no-undef */
                 const text = document.createTextNode(element[1][key[0]]);
+                /* eslint-enable no-undef */
                 cell.appendChild(text);
             })
         })

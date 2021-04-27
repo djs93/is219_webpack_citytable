@@ -1,5 +1,7 @@
 export default  function getJSON(url, callback) {
+    /* eslint-disable no-undef */
     var xhr = new XMLHttpRequest();
+    /* eslint-enable no-undef */
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
     xhr.onload = function() {
