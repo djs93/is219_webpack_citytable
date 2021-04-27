@@ -9,7 +9,7 @@ export default class DataFuncs {
             /* eslint-enable no-undef */
             th.appendChild(text);
             row.appendChild(th);
-        })
+        });
     }
 
     static generateTableBody(table, data) {
@@ -22,8 +22,8 @@ export default class DataFuncs {
                 const text = document.createTextNode(element[1][key[0]]);
                 /* eslint-enable no-undef */
                 cell.appendChild(text);
-            })
-        })
+            });
+        });
     }
 
     static generateTable(table, data, dataRecords) {
