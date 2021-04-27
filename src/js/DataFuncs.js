@@ -3,7 +3,7 @@ export default class DataFuncs {
         const thead = table.createTHead();
         const row = thead.insertRow();
         data.forEach((key) => {
-            const th = document.createElement("th");
+            const th = document.createElement('th');
             const text = document.createTextNode(key);
             th.appendChild(text);
             row.appendChild(th);
