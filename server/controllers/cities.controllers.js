@@ -24,7 +24,7 @@ exports.create = (req, res) => {
             if (err) {
                 res.send(err);
             }
-            res.json({ error: false,message: 'Employee added successfully!',data: employee });
+            res.json({ error: false, message: 'Employee added successfully!', data: employee });
         });
     }
 };
