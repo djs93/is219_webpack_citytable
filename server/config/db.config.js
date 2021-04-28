@@ -8,7 +8,7 @@ const dbConn = mysql.createConnection({
     user: 'root',
     password: 'root',
     port: '32000',
-    database: 'citiesData'
+    database: 'citiesData',
 });
 dbConn.connect((err) => {
     if (err) throw err;
