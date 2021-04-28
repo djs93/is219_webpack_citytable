@@ -16,12 +16,12 @@ exports.create = function(req, res) {
 
     // handles null error
     if(req.body.constructor === Object && Object.keys(req.body).length === 0){
-        res.status(400).send({ error:true, message: 'Please provide all required field' });
+        res.status(400).send({ error: true, message: 'Please provide all required field' });
     }else{
         City.create(new_employee, (err, employee) => {
             if (err)
                 res.send(err);
-            res.json({error:false,message:'Employee added successfully!',data:employee});
+            res.json({error: false,message: 'Employee added successfully!',data: employee});
         });
     }
 };
@@ -38,12 +38,12 @@ exports.findById = function(req, res) {
 
 exports.update = function(req, res) {
     if(req.body.constructor === Object && Object.keys(req.body).length === 0){
-        res.status(400).send({ error:true, message: 'Please provide all required field' });
+        res.status(400).send({ error: true, message: 'Please provide all required field' });
     }else{
         City.update(req.params.id, new City(req.body), (err, employee) => {
             if (err)
                 res.send(err);
-            res.json({ error:false, message: 'Employee successfully updated' });
+            res.json({ error: false, message: 'Employee successfully updated' });
         });
     }
 
@@ -54,6 +54,6 @@ exports.delete = function(req, res) {
     City.delete( req.params.id, (err, employee) => {
         if (err)
             res.send(err);
-        res.json({ error:false, message: 'Employee successfully deleted' });
+        res.json({ error: false, message: 'Employee successfully deleted' });
     });
 };
