@@ -17,7 +17,7 @@ exports.create = (req, res) => {
     /* eslint-enable no-unused-vars */
 
     // handles null error
-    if (req.body.constructor === Object && Object.keys(req.body).length === 0){
+    if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
         res.status(400).send({ error: true, message: 'Please provide all required field' });
     } else {
         City.create(newEmployee, (err, employee) => {
@@ -39,7 +39,7 @@ exports.findById = (req, res) => {
 };
 
 exports.update = (req, res) => {
-    if (req.body.constructor === Object && Object.keys(req.body).length === 0){
+    if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
         res.status(400).send({ error: true, message: 'Please provide all required field' });
     } else {
         City.update(req.params.id, new City(req.body), (err, employee) => {
