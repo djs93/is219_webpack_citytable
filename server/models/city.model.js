@@ -1,7 +1,7 @@
 'user strict';
 const dbConn = require('../config/db.config');
 // city object create
-let city = function (city) {
+let city = (city) => {
     this.fldName = city.fldName;
     this.fldLat = city.fldLat;
     this.fldLong = city.fldLong;
@@ -10,7 +10,7 @@ let city = function (city) {
     this.fldCapitalStatus = city.fldCapitalStatus;
     this.fldPopulation = city.fldPopulation;
 };
-city.create = function (newCity, result) {
+city.create = (newCity, result) => {
     dbConn.query('INSERT INTO tblCitiesImport set ?', newCity, (err, res) => {
         if (err) {
             console.log('error: ', err);
@@ -21,7 +21,7 @@ city.create = function (newCity, result) {
         }
     });
 };
-city.findById = function (id, result) {
+city.findById = (id, result) => {
     dbConn.query('Select * from tblCitiesImport where id = ? ', id, (err, res) => {
         if (err) {
             console.log('error: ', err);
@@ -31,7 +31,7 @@ city.findById = function (id, result) {
         }
     });
 };
-city.findAll = function (result) {
+city.findAll = (result) => {
     dbConn.query('Select * from tblCitiesImport', (err, res) => {
         if (err) {
             console.log('error: ', err);
@@ -42,7 +42,7 @@ city.findAll = function (result) {
         }
     });
 };
-city.update = function (id, city, result) {
+city.update = (id, city, result) => {
     dbConn.query('UPDATE tblCitiesImport SET fldName=?,fldLat=?,fldLong=?,fldCountry=?,fldAbbreviation=?,fldCapitalStatus=?,fldPopulation=? WHERE id = ?', [city.fldName, city.fldLat, city.fldLong, city.fldCountry, city.fldAbbreviation, city.fldCapitalStatus, city.fldPopulation, id], (err, res) => {
         if (err) {
             console.log('error: ', err);
@@ -52,7 +52,7 @@ city.update = function (id, city, result) {
         }
     });
 };
-city.delete = function (id, result) {
+city.delete = (id, result) => {
     dbConn.query('DELETE FROM tblCitiesImport WHERE id = ?', [id], (err, res) => {
         if (err) {
             console.log('error: ', err);
