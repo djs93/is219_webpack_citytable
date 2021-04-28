@@ -9,8 +9,10 @@ getJSON('http://localhost:8000/api/v1/cities',
     (err, records) => {
         if (err !== null) {
             /* eslint-disable no-undef */
+            /* eslint-disable no-alert */
             alert('Something went wrong: ' + err);
             /* eslint-enable no-undef */
+            /* eslint-enable no-alert */
         } else {
             /* eslint-disable no-undef */
             let table = document.querySelector('table');
