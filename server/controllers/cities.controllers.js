@@ -12,7 +12,7 @@ exports.findAll = (req, res) => {
 };
 
 exports.create = (req, res) => {
-    const new_employee = new City(req.body);
+    const newEmployee = new City(req.body);
 
     // handles null error
     if(req.body.constructor === Object && Object.keys(req.body).length === 0){
