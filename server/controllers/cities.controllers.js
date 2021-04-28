@@ -52,7 +52,7 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    City.delete( req.params.id, (err) => {
+    City.delete(req.params.id, (err) => {
         if (err) {
             res.send(err);
         }
