@@ -11,7 +11,6 @@ exports.findAll = (req, res) => {
     });
 };
 
-
 exports.create = (req, res) => {
     const new_employee = new City(req.body);
 
@@ -28,7 +27,6 @@ exports.create = (req, res) => {
     }
 };
 
-
 exports.findById = (req, res) => {
     City.findById(req.params.id, (err, employee) => {
         if (err) {
@@ -37,7 +35,6 @@ exports.findById = (req, res) => {
         res.json(employee);
     });
 };
-
 
 exports.update = (req, res) => {
     if(req.body.constructor === Object && Object.keys(req.body).length === 0){
@@ -52,7 +49,6 @@ exports.update = (req, res) => {
     }
 
 };
-
 
 exports.delete = (req, res) => {
     City.delete( req.params.id, (err, employee) => {
