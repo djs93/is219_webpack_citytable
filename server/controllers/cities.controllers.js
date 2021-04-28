@@ -7,7 +7,7 @@ exports.findAll = (req, res) => {
             res.send(err);
         }
         console.log('res', cities);
-        res.json({ data: cities});
+        res.json({ data: cities });
     });
 };
 
@@ -23,7 +23,7 @@ exports.create = (req, res) => {
             if (err) {
                 res.send(err);
             }
-            res.json({error: false,message: 'Employee added successfully!',data: employee});
+            res.json({ error: false,message: 'Employee added successfully!',data: employee });
         });
     }
 };
