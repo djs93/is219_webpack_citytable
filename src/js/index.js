@@ -15,10 +15,10 @@ getJSON('http://localhost:8000/api/v1/cities',
             /* eslint-enable no-alert */
         } else {
             /* eslint-disable no-undef */
-            let table = document.querySelector('table');
+            const table = document.querySelector('table');
             /* eslint-enable no-undef */
-            let data = Object.keys((records.data[0]));
-            let dataRecords = records.data;
+            const data = Object.keys((records.data[0]));
+            const dataRecords = records.data;
 
             DataFuncs.generateTable(table, data, dataRecords);
         }
