@@ -13,4 +13,4 @@ export default function getJSON(url, callback) {
         }
     };
     xhr.send();
-};
+}
