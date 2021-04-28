@@ -6,7 +6,7 @@ const open = require('open');
 
 const bodyParser = require('body-parser');
 
-var cors = require('cors')
+const cors = require('cors')
 
 app.use(cors())
 app.use(express.static('docs'));
