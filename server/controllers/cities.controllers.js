@@ -3,8 +3,9 @@ const City = require('../models/city.model');
 exports.findAll = (req, res) => {
     City.findAll((err, cities) => {
         console.log('controller');
-        if (err)
+        if (err) {
             res.send(err);
+        }
         console.log('res', cities);
         res.json({ 'data': cities});
     });
@@ -19,8 +20,9 @@ exports.create = (req, res) => {
         res.status(400).send({ error: true, message: 'Please provide all required field' });
     }else{
         City.create(new_employee, (err, employee) => {
-            if (err)
+            if (err) {
                 res.send(err);
+            }
             res.json({error: false,message: 'Employee added successfully!',data: employee});
         });
     }
@@ -29,8 +31,9 @@ exports.create = (req, res) => {
 
 exports.findById = (req, res) => {
     City.findById(req.params.id, (err, employee) => {
-        if (err)
+        if (err) {
             res.send(err);
+        }
         res.json(employee);
     });
 };
@@ -41,8 +44,9 @@ exports.update = (req, res) => {
         res.status(400).send({ error: true, message: 'Please provide all required field' });
     }else{
         City.update(req.params.id, new City(req.body), (err, employee) => {
-            if (err)
+            if (err) {
                 res.send(err);
+            }
             res.json({ error: false, message: 'Employee successfully updated' });
         });
     }
@@ -52,8 +56,9 @@ exports.update = (req, res) => {
 
 exports.delete = (req, res) => {
     City.delete( req.params.id, (err, employee) => {
-        if (err)
+        if (err) {
             res.send(err);
+        }
         res.json({ error: false, message: 'Employee successfully deleted' });
     });
 };
