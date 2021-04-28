@@ -1,5 +1,3 @@
-'use strict';
-
 const City = require('../models/city.model');
 
 exports.findAll = function(req, res) {
