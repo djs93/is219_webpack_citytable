@@ -2,14 +2,14 @@
 
 const dbConn = require('../config/db.config');
 // city object create
-const city = (city) => {
-    this.fldName = city.fldName;
-    this.fldLat = city.fldLat;
-    this.fldLong = city.fldLong;
-    this.fldCountry = city.fldCountry;
-    this.fldAbbreviation = city.fldAbbreviation;
-    this.fldCapitalStatus = city.fldCapitalStatus;
-    this.fldPopulation = city.fldPopulation;
+const city = (cityData) => {
+    this.fldName = cityData.fldName;
+    this.fldLat = cityData.fldLat;
+    this.fldLong = cityData.fldLong;
+    this.fldCountry = cityData.fldCountry;
+    this.fldAbbreviation = cityData.fldAbbreviation;
+    this.fldCapitalStatus = cityData.fldCapitalStatus;
+    this.fldPopulation = cityData.fldPopulation;
 };
 city.create = (newCity, result) => {
     dbConn.query('INSERT INTO tblCitiesImport set ?', newCity, (err, res) => {
@@ -43,8 +43,8 @@ city.findAll = (result) => {
         }
     });
 };
-city.update = (id, city, result) => {
-    dbConn.query('UPDATE tblCitiesImport SET fldName=?,fldLat=?,fldLong=?,fldCountry=?,fldAbbreviation=?,fldCapitalStatus=?,fldPopulation=? WHERE id = ?', [city.fldName, city.fldLat, city.fldLong, city.fldCountry, city.fldAbbreviation, city.fldCapitalStatus, city.fldPopulation, id], (err, res) => {
+city.update = (id, cityData, result) => {
+    dbConn.query('UPDATE tblCitiesImport SET fldName=?,fldLat=?,fldLong=?,fldCountry=?,fldAbbreviation=?,fldCapitalStatus=?,fldPopulation=? WHERE id = ?', [cityData.fldName, cityData.fldLat, cityData.fldLong, cityData.fldCountry, cityData.fldAbbreviation, cityData.fldCapitalStatus, cityData.fldPopulation, id], (err, res) => {
         if (err) {
             console.log('error: ', err);
             result(null, err);
