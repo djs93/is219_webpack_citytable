@@ -1,4 +1,5 @@
 'user strict';
+
 const dbConn = require('../config/db.config');
 // city object create
 let city = (city) => {
