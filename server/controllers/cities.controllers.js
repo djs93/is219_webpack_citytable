@@ -6,7 +6,7 @@ exports.findAll = function(req, res) {
         if (err)
             res.send(err);
         console.log('res', cities);
-        res.json({ "data": cities});
+        res.json({ 'data': cities});
     });
 };
 
@@ -21,7 +21,7 @@ exports.create = function(req, res) {
         City.create(new_employee, function(err, employee) {
             if (err)
                 res.send(err);
-            res.json({error:false,message:"Employee added successfully!",data:employee});
+            res.json({error:false,message:'Employee added successfully!',data:employee});
         });
     }
 };

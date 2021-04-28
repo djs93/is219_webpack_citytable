@@ -12,6 +12,6 @@ const dbConn = mysql.createConnection({
 });
 dbConn.connect(function(err) {
     if (err) throw err;
-    console.log("Database Connected!");
+    console.log('Database Connected!');
 });
 module.exports = dbConn;
