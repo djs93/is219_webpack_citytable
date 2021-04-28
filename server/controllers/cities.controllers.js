@@ -7,7 +7,7 @@ exports.findAll = (req, res) => {
             res.send(err);
         }
         console.log('res', cities);
-        res.json({ 'data': cities});
+        res.json({ data: cities});
     });
 };
 
