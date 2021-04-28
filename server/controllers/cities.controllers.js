@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     if(req.body.constructor === Object && Object.keys(req.body).length === 0){
         res.status(400).send({ error: true, message: 'Please provide all required field' });
     }else{
-        City.create(new_employee, (err, employee) => {
+        City.create(newEmployee, (err, employee) => {
             if (err) {
                 res.send(err);
             }
